@@ -1,0 +1,21 @@
+class Lista
+{
+    private:
+        static Lista* insta;
+        Lista(){}
+
+    public:
+        static Lista* getInstance()
+        {
+            if (insta == NULL)
+            {
+                insta = new Lista();
+            }
+            return insta;
+        }
+
+int main()
+{
+    Lista *pierwsza = Lista::getInstance();
+    return 0;
+}
